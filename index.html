@@ -5,6 +5,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Upload screen</title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -14,7 +15,7 @@
     <section 
     class="drag-files"
     >
-      <i class="ph ph-cloud-awwor-up"></i>
+      <i class="ph ph-cloud-arrow-up"></i>
 
       <h3>Importe seus aquivos</h3>
       <p>Arraste ou clique para fazer o upload</p>
@@ -22,6 +23,32 @@
       <input type="file"> 
       
   </section>
+  <section class="files">
+    <div class="box uploading">
+      <div class="icon">
+        <i class="ph-fill ph-file"></i>
+      </div>
+      <div class="info">
+        <div class="filename">print_screen.jpg</div>
+        <div class="filesize">
+          <span>30 MB /</span>
+          <span> 76 MB</span>
+        </div>
+        <div class="bar">
+          <progress 
+          value="46" 
+          max="100">
+        </progress>
+        </div>
+      </div>
+      <div class="action">
+        <i class="ph ph-x"></i>
+      </div>
+    </div>
+    <div class="box done"></div>
+    <div class="box error"></div>
+  </section>
   </div>
 </body>
 </html>
+
