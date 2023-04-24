@@ -3,7 +3,7 @@
   padding:0;
   box-sizing:border-box;
 }
-
+ 
 html, body{
   backgound:#fbfaff;
   min-height:100vh;
@@ -81,6 +81,8 @@ position:absolute;
   display:flex;
   gap:12px;
 
+  position:relative;
+
   --icon-bg:#eee;
   --icon-color:#aaa;
   --progress-color:#000;
@@ -88,7 +90,7 @@ position:absolute;
 }
 
 .box .icon{
-  backgound: var(--icon-bg);
+  background-color: var(--icon-bg);
   border-radius:4px;
 
   padding:16px 12px;
@@ -139,11 +141,50 @@ progress{
 }
 
 progress::-webkit-progress-bar{
-  backgound:#e3e3ed;
+  backgound-color:#e3e3ed;
 
 }
 
 progress::-webkit-progress-value{
-  backgound:var(--progress-color);
+  background:var(--progress-color);
   
+}
+
+.bar span{
+  font-size:12px;
+  font-weight:500;
+  color:var(--progress-text);
+}
+
+.action{
+  position:absolute;
+  top: 8px;
+  right: 8px;
+
+  color: #794fed;
+  cursor: pointer;
+}
+
+/* colors */
+
+.uploading{
+  --icon-bg:#e9e3f8;
+  --icon-color:#ac96e4;
+  --progress-color:linear-gradient(90deg, rgba(58, 97, 237, 0.52) 0%,
+  #7c3aed 100%);
+  --progress-text:#9892a6;
+}
+
+.done{
+  --icon-bg:#daf2d9;
+  --icon-color:#73b172;
+  --progress-color:#73b172;
+  --progress-text:#4e884d;
+}
+
+.error{
+  --icon-bg:#f2d9d9;
+  --icon-color:#e36363;
+  --progress-color:white;
+  --progress-text:#e36363;
 }
